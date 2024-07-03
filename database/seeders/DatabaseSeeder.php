@@ -17,18 +17,18 @@ class DatabaseSeeder extends Seeder
         User::factory(10)->create();
 
         User::factory()->create([
-            'name' => 'Bahri Admin',
-            'email' => 'bahri@fic16.com',
-            'password' => Hash::make('12345678'),
+            'name' => 'MAH Admin',
+            'email' => 'mahdev@fic16.com',
+            'password' => Hash::make('qwerty123'),
         ]);
 
         // data dummy for company
         \App\Models\Company::create([
-            'name' => 'PT. FIC16',
-            'email' => 'fic16@codewithbahri.com',
-            'address' => 'Jl. Raya Kedung Turi No. 20, Sleman, DIY',
-            'latitude' => '-7.747033',
-            'longitude' => '110.355398',
+            'name' => 'PT. MAHDEV',
+            'email' => 'fic16@mahdev.com',
+            'address' => 'Rusunawa Blok B.416, Sawahlunto, SUMBAR',
+            'latitude' => '-0.658244',
+            'longitude' => '100.756543',
             'radius_km' => '0.5',
             'time_in' => '08:00',
             'time_out' => '17:00',
