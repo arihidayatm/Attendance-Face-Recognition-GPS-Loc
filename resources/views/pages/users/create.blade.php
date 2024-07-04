@@ -19,7 +19,7 @@
                 <h1>Advanced Forms</h1>
                 <div class="section-header-breadcrumb">
                     <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-                    <div class="breadcrumb-item"><a href="#">Forms</a></div>
+                    <div class="breadcrumb-item"><a href="{{ route('users.index') }}">Forms</a></div>
                     <div class="breadcrumb-item">Users</div>
                 </div>
             </div>
@@ -134,6 +134,8 @@
                         </div>
                         <div class="card-footer text-right">
                             <button class="btn btn-primary">Submit</button>
+                            {{-- back button --}}
+                            <a href="{{ route('users.index') }}" class="btn btn-secondary">Back</a>
                         </div>
                     </form>
                 </div>

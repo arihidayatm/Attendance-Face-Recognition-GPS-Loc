@@ -12,7 +12,7 @@ Route::get('/', function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('home', function () {
-        return view('pages.dashboard', ['type_menu' => 'home']);
+        return view('pages.dashboard');
     })->name('home');
 
     Route::resource('users', UserController::class);

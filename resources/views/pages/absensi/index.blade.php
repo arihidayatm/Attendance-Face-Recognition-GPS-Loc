@@ -44,7 +44,7 @@
                                 <div class="float-right">
                                     <form method="GET" action="{{ route('attendances.index') }}">
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Search by patient name" name="name">
+                                            <input type="text" class="form-control" placeholder="Search by name" name="name">
                                             <div class="input-group-append">
                                                 <button class="btn btn-primary"><i class="fas fa-search"></i></button>
                                             </div>
