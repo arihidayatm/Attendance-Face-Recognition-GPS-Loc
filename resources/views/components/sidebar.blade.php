@@ -1,13 +1,17 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="{{ url('home') }}">MAH DEV</a>
+            <img class="rounded-circle mr-3"
+                width="60"
+                src="{{ asset('img/MAH Dev Logo.png') }}"
+                alt="avatar">
+            {{-- <a href="{{ url('home') }}">MAH DEV</a> --}}
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
             <a href="{{ url('home') }}">St</a>
         </div>
         <ul class="sidebar-menu">
-
+            <li class="menu-header">Dashboard</li>
             <li class="nav-item  ">
                 <a href="{{ url('home') }}" class="nav-link ">
                     <i class="fas fa-home">
@@ -15,6 +19,7 @@
                 </a>
             </li>
 
+            <li class="menu-header">Master Data</li>
             <li class="nav-item ">
                 <a href="{{ route('users.index') }}" class="nav-link ">
                     <i class="fas fa-users"></i>
@@ -41,6 +46,16 @@
                     <span>Permission</span>
                 </a>
             </li>
+
+            <li class="menu-header">Reports</li>
+        {{-- </ul> --}}
+
+        <div class="hide-sidebar-mini mt-4 mb-4 p-3">
+            <a href="https://getstisla.com/docs"
+                class="btn btn-primary btn-lg btn-block btn-icon-split">
+                <i class="fas fa-rocket"></i> Documentation
+            </a>
+        </div>
 
     </aside>
 </div>
