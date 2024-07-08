@@ -8,7 +8,7 @@
             {{-- <a href="{{ url('home') }}">MAH DEV</a> --}}
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
-            <a href="{{ url('home') }}">St</a>
+            <a href="{{ url('home') }}">MAH</a>
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
@@ -19,7 +19,7 @@
                 </a>
             </li>
 
-            <li class="menu-header">Master Data</li>
+            <li class="menu-header">Masters</li>
             <li class="nav-item ">
                 <a href="{{ route('users.index') }}" class="nav-link ">
                     <i class="fas fa-users"></i>
@@ -48,12 +48,18 @@
             </li>
 
             <li class="menu-header">Reports</li>
+            <li class="nav-item">
+                <a href="{{ route('permissions.index') }}" class="nav-link">
+                    <i class="fas fa-file"></i>
+                    <span>Attendance Report</span>
+                </a>
+            </li>
         {{-- </ul> --}}
 
         <div class="hide-sidebar-mini mt-4 mb-4 p-3">
             <a href="https://getstisla.com/docs"
                 class="btn btn-primary btn-lg btn-block btn-icon-split">
-                <i class="fas fa-rocket"></i> Documentation
+                <i class="fas fa-book"></i> Documentation
             </a>
         </div>
 

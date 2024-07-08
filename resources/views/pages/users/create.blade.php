@@ -134,8 +134,8 @@
                         </div>
                         <div class="card-footer text-right">
                             <button class="btn btn-primary">Submit</button>
-                            {{-- back button --}}
-                            <a href="{{ route('users.index') }}" class="btn btn-secondary">Back</a>
+                            {{-- Cancel button --}}
+                            <a href="{{ route('users.index') }}" class="btn btn-secondary">Cancel</a>
                         </div>
                     </form>
                 </div>
