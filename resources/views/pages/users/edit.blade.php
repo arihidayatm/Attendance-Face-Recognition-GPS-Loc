@@ -87,7 +87,9 @@
                                 <label>Phone</label>
                                 <input type="number" class="form-control" name="phone" value="{{ $user->phone }}">
                             </div>
+                            {{-- Positions with Options --}}
                             <div class="form-group">
+            
                                 <label>Position</label>
                                 <input type="text"
                                     class="form-control @error('position')
@@ -119,17 +121,17 @@
                                     <label class="selectgroup-item">
                                         <input type="radio" name="role" value="admin" class="selectgroup-input"
                                             @if ($user->role == 'admin') checked @endif>
-                                        <span class="selectgroup-button">Admin</span>
+                                        <span class="selectgroup-button">Super Admin</span>
                                     </label>
                                     <label class="selectgroup-item">
                                         <input type="radio" name="role" value="supervisor" class="selectgroup-input"
                                             @if ($user->role == 'supervisor') checked @endif>
-                                        <span class="selectgroup-button">Supervisor</span>
+                                        <span class="selectgroup-button">Admin OPD</span>
                                     </label>
                                     <label class="selectgroup-item">
                                         <input type="radio" name="role" value="staff" class="selectgroup-input"
                                             @if ($user->role == 'staff') checked @endif>
-                                        <span class="selectgroup-button">Staff</span>
+                                        <span class="selectgroup-button">Pegawai</span>
                                     </label>
 
                                 </div>
@@ -137,7 +139,7 @@
                         </div>
                         <div class="card-footer text-right">
                             <button class="btn btn-primary">Submit</button>
-                        {{-- Cancel button --}}
+                            {{-- Cancel button --}}
                             <a href="{{ route('users.index') }}" class="btn btn-secondary">Cancel</a>
                         </div>
                     </form>

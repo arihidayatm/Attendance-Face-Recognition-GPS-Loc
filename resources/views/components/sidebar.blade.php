@@ -29,20 +29,26 @@
 
             <li class="nav-item">
                 <a href="{{ route('companies.show', 1) }}" class="nav-link">
-                    <i class="fas fa-building"></i>
+                    <i class="fas fa-building-flag"></i>
                     <span>Company</span>
                 </a>
             </li>
             <li class="nav-item">
+                <a href="{{ route('positions.index') }}" class="nav-link">
+                    <i class="fas fa-marker"></i>
+                    <span>Positions</span>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a href="{{ route('attendances.index') }}" class="nav-link">
-                    <i class="fas fa-calendar"></i>
+                    <i class="fas fa-clipboard-check"></i>
                     <span>Attendances</span>
                 </a>
             </li>
 
             <li class="nav-item">
                 <a href="{{ route('permissions.index') }}" class="nav-link">
-                    <i class="fas fa-columns"></i>
+                    <i class="fas fa-file-signature"></i>
                     <span>Permission</span>
                 </a>
             </li>
@@ -50,7 +56,7 @@
             <li class="menu-header">Reports</li>
             <li class="nav-item">
                 <a href="{{ route('permissions.index') }}" class="nav-link">
-                    <i class="fas fa-file"></i>
+                    <i class="fas fa-file-invoice"></i>
                     <span>Attendance Report</span>
                 </a>
             </li>

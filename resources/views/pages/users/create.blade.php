@@ -86,7 +86,21 @@
                                 <label>Phone</label>
                                 <input type="number" class="form-control" name="phone">
                             </div>
+                            {{-- Positions with Options --}}
                             <div class="form-group">
+                                <label>Position</label>
+                                <input type="text" 
+                                    class="form-control @error('position')
+                                is-invalid
+                                @enderror" 
+                                    name="position">
+                                @error('position')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+                            {{-- <div class="form-group">
                                 <label>Position</label>
                                 <input type="text"
                                     class="form-control @error('position')
@@ -98,7 +112,7 @@
                                         {{ $message }}
                                     </div>
                                 @enderror
-                            </div>
+                            </div> --}}
                             <div class="form-group">
                                 <label>Department</label>
                                 <input type="text"
@@ -118,15 +132,15 @@
                                     <label class="selectgroup-item">
                                         <input type="radio" name="role" value="admin" class="selectgroup-input"
                                             checked="">
-                                        <span class="selectgroup-button">Admin</span>
+                                        <span class="selectgroup-button">Super Admin</span>
                                     </label>
                                     <label class="selectgroup-item">
                                         <input type="radio" name="role" value="supervisor" class="selectgroup-input">
-                                        <span class="selectgroup-button">Supervisor</span>
+                                        <span class="selectgroup-button">Admin OPD</span>
                                     </label>
                                     <label class="selectgroup-item">
                                         <input type="radio" name="role" value="staff" class="selectgroup-input">
-                                        <span class="selectgroup-button">Staff</span>
+                                        <span class="selectgroup-button">Pegawai</span>
                                     </label>
 
                                 </div>
