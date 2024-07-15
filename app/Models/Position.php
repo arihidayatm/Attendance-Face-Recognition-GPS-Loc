@@ -15,6 +15,10 @@ class Position extends Model
         'description',
     ];
 
+    public function users()
+    {
+        return $this->hasMany(User::class);
+    }
     public function position()
     {
         return $this->belongsTo(Position::class);

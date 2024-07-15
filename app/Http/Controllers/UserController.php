@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Position;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -21,6 +22,7 @@ class UserController extends Controller
     //create
     public function create()
     {
+        
         return view('pages.users.create');
     }
 
@@ -49,7 +51,8 @@ class UserController extends Controller
     //edit
     public function edit(User $user)
     {
-        return view('pages.users.edit', compact('user'));
+        $positions = Position::all();
+        return view('pages.users.edit', compact('positions', 'user'));
     }
 
     //update

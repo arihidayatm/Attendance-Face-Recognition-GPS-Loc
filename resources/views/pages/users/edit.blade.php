@@ -89,7 +89,14 @@
                             </div>
                             {{-- Positions with Options --}}
                             <div class="form-group">
-            
+                                <label for="position-option">Posisi</label>
+                                <select class="form-control" id="position-option" name="id">
+                                @foreach ($positions as $position)
+                                    <option value="{{ $position->id }}">{{ $position->name }}</option>
+                                @endforeach
+                                </select>
+                            </div>
+                            {{-- <div class="form-group">
                                 <label>Position</label>
                                 <input type="text"
                                     class="form-control @error('position')
@@ -101,7 +108,7 @@
                                         {{ $message }}
                                     </div>
                                 @enderror
-                            </div>
+                            </div> --}}
                             <div class="form-group">
                                 <label>Department</label>
                                 <input type="text"
