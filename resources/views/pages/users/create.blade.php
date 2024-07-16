@@ -88,31 +88,19 @@
                             </div>
                             {{-- Positions with Options --}}
                             <div class="form-group">
-                                <label>Position</label>
-                                <input type="text" 
-                                    class="form-control @error('position')
-                                is-invalid
-                                @enderror" 
-                                    name="position">
+                                <label for="position-option">Posisi</label>
+                                <select class="form-control" id="position-option" name="position">
+                                @foreach ($positions as $position)
+                                    <option value="{{ $position->name }}">{{ $position->name }}</option>
+                                @endforeach
+                                </select>
                                 @error('position')
                                     <div class="invalid-feedback">
                                         {{ $message }}
                                     </div>
                                 @enderror
                             </div>
-                            {{-- <div class="form-group">
-                                <label>Position</label>
-                                <input type="text"
-                                    class="form-control @error('position')
-                                is-invalid
-                            @enderror"
-                                    name="position">
-                                @error('position')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div> --}}
+                            
                             <div class="form-group">
                                 <label>Department</label>
                                 <input type="text"

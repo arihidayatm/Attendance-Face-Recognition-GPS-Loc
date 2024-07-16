@@ -90,11 +90,16 @@
                             {{-- Positions with Options --}}
                             <div class="form-group">
                                 <label for="position-option">Posisi</label>
-                                <select class="form-control" id="position-option" name="id">
+                                <select class="form-control" id="position-option" name="position">
                                 @foreach ($positions as $position)
-                                    <option value="{{ $position->id }}">{{ $position->name }}</option>
+                                    <option value="{{ $position->name }}">{{ $position->name }}</option>
                                 @endforeach
                                 </select>
+                                @error('position')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
                             {{-- <div class="form-group">
                                 <label>Position</label>
@@ -140,7 +145,8 @@
                                             @if ($user->role == 'staff') checked @endif>
                                         <span class="selectgroup-button">Pegawai</span>
                                     </label>
-
+                                    {{-- Hidden input --}}
+                                    <input type="hidden" name="id" value="{{ $user->id}}">
                                 </div>
                             </div>
                         </div>

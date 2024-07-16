@@ -22,8 +22,8 @@ class UserController extends Controller
     //create
     public function create()
     {
-        
-        return view('pages.users.create');
+        $positions = Position::all();
+        return view('pages.users.create', compact('positions'));
     }
 
     //store
@@ -49,7 +49,7 @@ class UserController extends Controller
     }
 
     //edit
-    public function edit(User $user)
+    public function edit(Request $request, User $user)
     {
         $positions = Position::all();
         return view('pages.users.edit', compact('positions', 'user'));
@@ -58,12 +58,13 @@ class UserController extends Controller
     //update
     public function update(Request $request, User $user)
     {
+        // dd($request);
         $request->validate([
             'name' => 'required',
             'email' => 'required|email',
         ]);
-
-        $user->update([
+        
+        $user->where('id', $user->id)->update([
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
